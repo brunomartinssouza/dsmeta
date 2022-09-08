@@ -41,7 +41,7 @@ public class SmsService {
 		//sale.setAmount(Double.valueOf(formato.format(sale.getAmount())));
 
 		String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " + date
-			    + " com um total de R$ " + new DecimalFormat("#.##").format(sale.getAmount());
+			    + " com um total de R$ " + new DecimalFormat("#,###.00").format(sale.getAmount());
 		
 		/*
 		 * String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " +
