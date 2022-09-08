@@ -37,12 +37,11 @@ public class SmsService {
 		
 		String date = sale.getDate().getMonthValue() + "/" + sale.getDate().getYear();
 		
-		double numero= sale.getAmount();
 		DecimalFormat formato = new DecimalFormat("#.##");      
-		sale.setAmount(Double.valueOf(formato.format(numero)));
+		sale.setAmount(Double.valueOf(formato.format(sale.getAmount())));
 
 		String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " + date
-			    + " com um total de R$ " + String.format("%.2f", sale.getAmount());
+			    + " com um total de R$ " + sale.getAmount();
 		
 		/*
 		 * String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " +
