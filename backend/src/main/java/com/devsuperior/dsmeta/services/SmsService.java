@@ -37,7 +37,8 @@ public class SmsService {
 		
 		String date = sale.getDate().getMonthValue() + "/" + sale.getDate().getYear();
 
-		String msg = "O vendedor ";
+		String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " +
+				  date;
 		
 		/*
 		 * String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " +
